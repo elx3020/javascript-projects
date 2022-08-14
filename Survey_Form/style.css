@@ -1,0 +1,165 @@
+:root{
+    --color-white: white;
+    --color-darkred: rgb(90, 17, 17);
+    --color-alphared: rgba(124, 23, 23, 0.4);
+    --color-green: rgb(63, 151, 122);
+}
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--color-white);
+  margin: 0;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: var(--color-darkred);
+  background-image: linear-gradient(
+      0deg,
+      rgba(158, 58, 58, 0.1),
+      rgb(206, 136, 142)
+    ),
+    url(https://images.pexels.com/photos/4511372/pexels-photo-4511372.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+.container {
+  width: 100%;
+  margin: 3.125rem auto 0 auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+.header{
+    font-weight: 3.3rem;
+}
+
+.description{
+    font-style: italic;
+    font-weight: 200;
+    text-shadow: 2px 2px 2px #495057;
+}
+
+label{
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    font-size: 1.125rem;
+}
+
+input,
+button,
+select,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.text-center, 
+.description-center{
+    text-align: center;
+}
+
+
+
+form{
+    border-radius: 0.25rem;
+    padding: 2.5rem 0.625rem;
+    background: var(--color-alphared);
+
+}
+
+@media (min-width: 480px) {
+    form {
+      padding: 2.5rem;
+    }
+  }
+
+.form-format{
+    
+    padding: 0.25rem;
+    margin: 0 auto 3vh auto;
+    
+}
+
+.form-control{
+    display: block;
+    width: 100%;
+    height: 2.375rem;
+    padding: 0.375rem 0.75rem;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 2px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    
+}
+
+.form-control:focus {
+    border-color: #64d677;
+    outline: 0;
+    box-shadow: 0 0 10px 0.3rem rgba(57, 209, 126, 0.25);
+  }
+
+  .input-radio,
+.input-checkbox {
+  display: inline-block;
+  margin-right: 0.625rem;
+  min-height: 1.25rem;
+  min-width: 1.25rem;
+
+}
+
+
+
+.input-textarea {
+    min-height: 120px;
+    width: 100%;
+    padding: 0.625rem;
+    resize: vertical;
+  }
+
+  .submit-button {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    background: var(--color-green);
+    color: inherit;
+    border-radius: 2px;
+    cursor: pointer;
+  }
+
+

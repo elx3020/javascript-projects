@@ -1,0 +1,108 @@
+:root{
+    --transition: all 0.3s ease-in-out;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: roboto,sans-serif;
+}
+
+.nav-center{
+    display: fixed;
+    top: 0;
+}
+.nav-content{
+    width: 100%;
+    height: 3rem;
+    background: linear-gradient(30deg,rgb(247, 49, 148),rgb(255, 21, 21));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem 0 1rem;
+    color: white;
+    box-shadow: 0px 2px 5px rgba(134, 134, 134, 0.6);
+}
+
+.logo{
+    display: flex;
+    flex-direction:row;
+}
+
+.logo i{
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+
+.btn{
+    color: white;
+    background: transparent;
+    border: none;
+    font-size: 1.6rem;
+    padding: 0 0.3rem 0 0.3rem;
+    transition: var(--transition);
+
+}
+
+.toggler{
+    color: gray;
+    list-style: none;
+    
+}
+
+.toggler li{
+    margin-left: 2rem;
+    margin-bottom: 0.1rem;
+    margin-right: 2rem;
+}
+
+.toggler ul{
+    width: 100%;
+    padding-top: 1rem;
+    list-style: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.links {    
+    height:0;
+    overflow: hidden;
+    transition: var(--transition);
+    
+}
+
+.links a {
+    text-decoration: none;
+    color: gray;
+    display: block;
+    transition: var(--transition);
+    padding: 0.4rem;
+}
+
+
+.links a:hover{
+    color: white;
+    background: rgb(247, 49, 148);
+    padding-left: 1.2rem;
+}
+
+.nav-links{
+    box-shadow: 0px 1px 10px rgba(134, 134, 134, 0.3);
+    height: 15rem;
+}
+
+
+
+
+
+/* animations */
+
+
+.btn:hover{
+    background: rgba(190, 25, 53, 0.342);
+    rotate: 90deg;
+}
+

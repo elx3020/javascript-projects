@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Survey Form</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 id="title" class="text-center">Video Games Survey Form</h1>
+            <p id="description" class="description text-center" > A quick survey to known more about the games that you like.</p>
+        </header>
+        
+        <form action="submit" id="survey-form">
+            <div class="form-format">
+                <label for="name" id="name-label">Name: </label>
+                <input type="text" id="name" name="name" placeholder="Name:" class="form-control" required>
+            </div>
+            <div class="form-format">
+                <label for="email" id="email-label">Email: </label>
+                <input type="text" name="email" id="email" placeholder="Email:" class="form-control" required>
+
+            </div>
+            <div class="form-format">
+                <label for="number" id="number-label">Age:</label>
+                <input type="number" id="number" name="number" min="0" max="10" placeholder="Age:" class="form-control">
+            </div>
+            <div class="form-format">
+                <p>How many hours do you play in a week?</p>
+                <select id="dropdown" class="form-control" required>
+                    <option disabled selected value="">Select Number of hours:</option>
+                    <option value="1hour">1 hour</option>
+                    <option value="1hour">2 hour</option>
+                    <option value="1hour">3 hour</option>
+                    <option value="1hour">4 hour</option>
+                </select>
+
+            </div>
+            <div class="form-format">
+                <p>Which platform do you use the most?</p>
+                <label><input type="radio" name="user-recommend" value="console" class="input-radio">Consoles <span class="checkmark"></span></label>
+                <label><input type="radio" name="user-recommend" value="pc" class="input-radio">PC</label>
+                <label><input type="radio" name="user-recommend" value="pc" class="input-radio">Mobile</label>
+            </div>
+            <div class="form-format">
+                <p>Select the games genres that you play:</p>
+                <label><input type="checkbox" name="prefer" value="rpg" class="input-checkbox">RPG</label>
+                <label><input type="checkbox" name="prefer" value="arcade" class="input-checkbox">Arcade</label>
+                <label><input type="checkbox" name="prefer" value="arts" class="input-checkbox">ARTS</label>
+                <label><input type="checkbox" name="prefer" value="platformer" class="input-checkbox">Platformer</label>
+                <label><input type="checkbox" name="prefer" value="puzzle" class="input-checkbox">Puzzle</label>
+                <label><input type="checkbox" name="prefer" value="survival" class="input-checkbox">Survival</label>
+                <label><input type="checkbox" name="prefer" value="racing" class="input-checkbox"> Racing</label>
+                <label><input type="checkbox" name="prefer" value="sport" class="input-checkbox">Sport</label>
+            </div>
+            <div class="form-format">
+                <p>Describe your favorite game: <span class="optional">(Optional)</span></p>
+                <textarea name="comment" id="comments" class="input-textarea" placeholder="Enter your comment here..."></textarea>
+            </div>
+
+            <div class="form-format">
+                <button type="submit" id="submit" class="submit-button">Submit</button>
+            </div>
+    
+    
+        </form>
+        
+    </div>
+    
+</body>
+</html>
