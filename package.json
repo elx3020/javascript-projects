@@ -1,0 +1,28 @@
+{
+  "name": "javascript-projects",
+  "version": "1.0.0",
+  "description": "Many javascriptProjects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elx3020/javascript-projects.git"
+  },
+  "keywords": [
+    "javascript"
+  ],
+  "author": "elx3020",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elx3020/javascript-projects/issues"
+  },
+  "homepage": "https://github.com/elx3020/javascript-projects#readme",
+  "dependencies": {
+    "three": "^0.143.0"
+  },
+  "devDependencies": {
+    "webpack": "^5.74.0"
+  }
+}
