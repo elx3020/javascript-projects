@@ -6,9 +6,9 @@ class Car {
     this.height = height;
 
     this.speed = 0;
-    this.acceleration = 0.2;
-    this.maxSpeed = 3;
-    this.friction = 0.05;
+    this.acceleration = 0.075;
+    this.maxSpeed = 1;
+    this.friction = 0.015;
 
     this.angle = 0;
 
@@ -17,9 +17,9 @@ class Car {
     this.controls = new Controls();
   }
 
-  update() {
+  update(roadBorders) {
     this.#move();
-    this.sensor.update();
+    this.sensor.update(roadBorders);
 
     // console.table({ x: this.x, y: this.y });
   }
@@ -56,11 +56,11 @@ class Car {
     if (this.speed != 0) {
       const flip = this.speed > 0 ? 1 : -1;
       if (this.controls.left) {
-        this.angle += 0.03 * flip;
+        this.angle += 0.01 * flip;
       }
 
       if (this.controls.right) {
-        this.angle -= 0.03 * flip;
+        this.angle -= 0.01 * flip;
       }
     }
 
