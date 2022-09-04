@@ -1,11 +1,18 @@
 class Controls{
-    constructor(){
+    constructor(type){
         this.forward = false;
         this.reverse = false;
         this.left = false;
         this.right = false;
 // # symbol indicates that is a private method? need to check
-        this.#addKeyboardListeners();
+        
+        switch (type) {
+            case 'KEYS':
+                this.#addKeyboardListeners();
+                break;
+            case 'DUMMY':
+                this.forward = true;
+        }
     }
 
     #addKeyboardListeners(){
