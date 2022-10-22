@@ -1,5 +1,5 @@
 class Car {
-  constructor(x, y, width, height,controlType,maxSpeed = 1) {
+  constructor(x, y, width, height,controlType,maxSpeed = 3) {
     this.x = x;
     this.y = y;
     this.width = width;
@@ -33,7 +33,6 @@ class Car {
       this.sensor.update(roadBorders,traffic);
     }
 
-    // console.table({ x: this.x, y: this.y });
   }
 
 
@@ -76,6 +75,7 @@ class Car {
       x: this.x - Math.sin(Math.PI + this.angle + alpha) * rad,
       y: this.y - Math.cos(Math.PI + this.angle + alpha) * rad
     });
+
 
     return points;
     
