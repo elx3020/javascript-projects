@@ -24,7 +24,7 @@ class NeuralNetwork{
 
 
 // levels of the neural network
-
+// one floor, at the (botton) inputs, connection weights (middle), outputs (top) 
 class Level{
     constructor(inputCount,outputCount){
         this.inputs = new Array(inputCount);
@@ -32,7 +32,8 @@ class Level{
         this.biases = new Array (outputCount);
 
         this.weights = [];
-
+        // every input has one weight for each output
+        // number of weight = number of output
         for (let i = 0; i < inputCount; i++) {
             this.weights[i] = new Array(outputCount);
         }
@@ -42,9 +43,10 @@ class Level{
 
 
     static #randomize(level) {
+    // assing t
         for(let i= 0; i< level.inputs.length;i ++){
             for (let j = 0; j < level.outputs.length; j++) {
-                level.weights[i][j] = Math.random()*2-1;
+                level.weights[i][j] = Math.random()*2-1; // range -1 1 
             }
         }
 
@@ -55,12 +57,12 @@ class Level{
 
 static feedForward(givenInputs, level){
     for(let i=0;i<level.inputs.length;i++){
-        level.inputs[i] = givenInputs[i];
+        level.inputs[i] = givenInputs[i]; 
     }
 
     for(let i=0;i<level.outputs.length;i++){
         let sum=0;
-        for(let j=0; j< level.inputs.length;i++){
+        for(let j=0; j< level.inputs.length;j++){
             sum += level.inputs[j] * level.weights[j][i]  
         }
 
