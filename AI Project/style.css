@@ -8,3 +8,9 @@ body{
 #myCanvas{
     background: lightgray;
 }
+
+#VerticalButtons{
+    position: absolute;
+    right: 0;
+    top: 50vh;
+}
